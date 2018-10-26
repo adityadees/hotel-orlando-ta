@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Jul 2018 pada 18.17
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.2.3
+-- Generation Time: Oct 26, 2018 at 11:46 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `booking`
+-- Table structure for table `booking`
 --
 
 CREATE TABLE `booking` (
@@ -39,7 +39,7 @@ CREATE TABLE `booking` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `booking`
+-- Dumping data for table `booking`
 --
 
 INSERT INTO `booking` (`booking_kode`, `kamar_id`, `booking_awal`, `booking_akhir`, `booking_deskripsi`, `booking_status`, `booking_tanggal`) VALUES
@@ -59,7 +59,7 @@ INSERT INTO `booking` (`booking_kode`, `kamar_id`, `booking_awal`, `booking_akhi
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bukti_transfer`
+-- Table structure for table `bukti_transfer`
 --
 
 CREATE TABLE `bukti_transfer` (
@@ -69,7 +69,7 @@ CREATE TABLE `bukti_transfer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `bukti_transfer`
+-- Dumping data for table `bukti_transfer`
 --
 
 INSERT INTO `bukti_transfer` (`bt_id`, `booking_kode`, `bt_file`) VALUES
@@ -79,7 +79,7 @@ INSERT INTO `bukti_transfer` (`bt_id`, `booking_kode`, `bt_file`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `customer`
+-- Table structure for table `customer`
 --
 
 CREATE TABLE `customer` (
@@ -94,7 +94,7 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `customer`
+-- Dumping data for table `customer`
 --
 
 INSERT INTO `customer` (`customer_id`, `booking_kode`, `customer_nama`, `customer_email`, `customer_tel`, `customer_tgl_lahir`, `customer_kota`, `customer_alamat`) VALUES
@@ -105,7 +105,7 @@ INSERT INTO `customer` (`customer_id`, `booking_kode`, `customer_nama`, `custome
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `fasilitas`
+-- Table structure for table `fasilitas`
 --
 
 CREATE TABLE `fasilitas` (
@@ -114,7 +114,7 @@ CREATE TABLE `fasilitas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `fasilitas`
+-- Dumping data for table `fasilitas`
 --
 
 INSERT INTO `fasilitas` (`fasilitas_id`, `fasilitas_nama`) VALUES
@@ -132,7 +132,7 @@ INSERT INTO `fasilitas` (`fasilitas_id`, `fasilitas_nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `feedback`
+-- Table structure for table `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -144,7 +144,7 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `feedback`
+-- Dumping data for table `feedback`
 --
 
 INSERT INTO `feedback` (`feedback_id`, `kuisioner_id`, `feedback_nilai`, `feedback_email`, `feedback_tanggal`) VALUES
@@ -167,7 +167,7 @@ INSERT INTO `feedback` (`feedback_id`, `kuisioner_id`, `feedback_nilai`, `feedba
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gambar`
+-- Table structure for table `gambar`
 --
 
 CREATE TABLE `gambar` (
@@ -178,7 +178,7 @@ CREATE TABLE `gambar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `gambar`
+-- Dumping data for table `gambar`
 --
 
 INSERT INTO `gambar` (`gambar_id`, `tipe_kode`, `gambar_judul`, `gambar_file`) VALUES
@@ -190,7 +190,7 @@ INSERT INTO `gambar` (`gambar_id`, `tipe_kode`, `gambar_judul`, `gambar_file`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kamar`
+-- Table structure for table `kamar`
 --
 
 CREATE TABLE `kamar` (
@@ -200,7 +200,7 @@ CREATE TABLE `kamar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kamar`
+-- Dumping data for table `kamar`
 --
 
 INSERT INTO `kamar` (`kamar_id`, `tipe_kode`, `kamar_status`) VALUES
@@ -224,7 +224,7 @@ INSERT INTO `kamar` (`kamar_id`, `tipe_kode`, `kamar_status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori_layanan`
+-- Table structure for table `kategori_layanan`
 --
 
 CREATE TABLE `kategori_layanan` (
@@ -235,7 +235,7 @@ CREATE TABLE `kategori_layanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kategori_layanan`
+-- Dumping data for table `kategori_layanan`
 --
 
 INSERT INTO `kategori_layanan` (`kategori_id`, `kategori_nama`, `kategori_ket`, `kategori_gambar`) VALUES
@@ -244,7 +244,7 @@ INSERT INTO `kategori_layanan` (`kategori_id`, `kategori_nama`, `kategori_ket`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kuisioner`
+-- Table structure for table `kuisioner`
 --
 
 CREATE TABLE `kuisioner` (
@@ -253,7 +253,7 @@ CREATE TABLE `kuisioner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kuisioner`
+-- Dumping data for table `kuisioner`
 --
 
 INSERT INTO `kuisioner` (`kuisioner_id`, `kuisioner_pertanyaan`) VALUES
@@ -264,7 +264,7 @@ INSERT INTO `kuisioner` (`kuisioner_id`, `kuisioner_pertanyaan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `layanan`
+-- Table structure for table `layanan`
 --
 
 CREATE TABLE `layanan` (
@@ -276,7 +276,7 @@ CREATE TABLE `layanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `layanan`
+-- Dumping data for table `layanan`
 --
 
 INSERT INTO `layanan` (`layanan_id`, `kategori_id`, `layanan_nama`, `layanan_harga`, `layanan_satuan`) VALUES
@@ -285,7 +285,7 @@ INSERT INTO `layanan` (`layanan_id`, `kategori_id`, `layanan_nama`, `layanan_har
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pembayaran`
+-- Table structure for table `pembayaran`
 --
 
 CREATE TABLE `pembayaran` (
@@ -298,7 +298,7 @@ CREATE TABLE `pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pembayaran`
+-- Dumping data for table `pembayaran`
 --
 
 INSERT INTO `pembayaran` (`pembayaran_id`, `booking_kode`, `pembayaran_total`, `pembayaran_status`, `pembayaran_metode`, `pembayaran_date`) VALUES
@@ -309,7 +309,7 @@ INSERT INTO `pembayaran` (`pembayaran_id`, `booking_kode`, `pembayaran_total`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `promo`
+-- Table structure for table `promo`
 --
 
 CREATE TABLE `promo` (
@@ -322,7 +322,7 @@ CREATE TABLE `promo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `promo`
+-- Dumping data for table `promo`
 --
 
 INSERT INTO `promo` (`promo_id`, `tipe_kode`, `promo_min_hari`, `promo_diskon`, `promo_start`, `promo_end`) VALUES
@@ -332,7 +332,7 @@ INSERT INTO `promo` (`promo_id`, `tipe_kode`, `promo_min_hari`, `promo_diskon`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `slide`
+-- Table structure for table `slide`
 --
 
 CREATE TABLE `slide` (
@@ -343,7 +343,7 @@ CREATE TABLE `slide` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `slide`
+-- Dumping data for table `slide`
 --
 
 INSERT INTO `slide` (`slide_id`, `slide_judul`, `slide_ket`, `slide_gambar`) VALUES
@@ -353,7 +353,7 @@ INSERT INTO `slide` (`slide_id`, `slide_judul`, `slide_ket`, `slide_gambar`) VAL
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tipe`
+-- Table structure for table `tipe`
 --
 
 CREATE TABLE `tipe` (
@@ -366,7 +366,7 @@ CREATE TABLE `tipe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tipe`
+-- Dumping data for table `tipe`
 --
 
 INSERT INTO `tipe` (`tipe_kode`, `tipe_nama`, `tipe_harga`, `tipe_deskripsi`, `tipe_fasilitas`, `tipe_gambar`) VALUES
@@ -379,7 +379,7 @@ INSERT INTO `tipe` (`tipe_kode`, `tipe_nama`, `tipe_harga`, `tipe_deskripsi`, `t
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -395,7 +395,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_nik`, `user_nama`, `user_username`, `user_password`, `user_email`, `user_tel`, `user_alamat`, `user_foto`, `user_role`) VALUES
@@ -406,220 +406,220 @@ INSERT INTO `user` (`user_nik`, `user_nama`, `user_username`, `user_password`, `
 --
 
 --
--- Indeks untuk tabel `booking`
+-- Indexes for table `booking`
 --
 ALTER TABLE `booking`
   ADD PRIMARY KEY (`booking_kode`),
   ADD KEY `room_kode` (`kamar_id`);
 
 --
--- Indeks untuk tabel `bukti_transfer`
+-- Indexes for table `bukti_transfer`
 --
 ALTER TABLE `bukti_transfer`
   ADD PRIMARY KEY (`bt_id`);
 
 --
--- Indeks untuk tabel `customer`
+-- Indexes for table `customer`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`customer_id`),
   ADD KEY `booking_kode` (`booking_kode`);
 
 --
--- Indeks untuk tabel `fasilitas`
+-- Indexes for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
   ADD PRIMARY KEY (`fasilitas_id`);
 
 --
--- Indeks untuk tabel `feedback`
+-- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD KEY `kuisioner_id` (`kuisioner_id`);
 
 --
--- Indeks untuk tabel `gambar`
+-- Indexes for table `gambar`
 --
 ALTER TABLE `gambar`
   ADD PRIMARY KEY (`gambar_id`),
   ADD KEY `room_kode` (`tipe_kode`);
 
 --
--- Indeks untuk tabel `kamar`
+-- Indexes for table `kamar`
 --
 ALTER TABLE `kamar`
   ADD PRIMARY KEY (`kamar_id`),
   ADD KEY `room_kode` (`tipe_kode`);
 
 --
--- Indeks untuk tabel `kategori_layanan`
+-- Indexes for table `kategori_layanan`
 --
 ALTER TABLE `kategori_layanan`
   ADD PRIMARY KEY (`kategori_id`);
 
 --
--- Indeks untuk tabel `kuisioner`
+-- Indexes for table `kuisioner`
 --
 ALTER TABLE `kuisioner`
   ADD PRIMARY KEY (`kuisioner_id`);
 
 --
--- Indeks untuk tabel `layanan`
+-- Indexes for table `layanan`
 --
 ALTER TABLE `layanan`
   ADD PRIMARY KEY (`layanan_id`),
   ADD KEY `kategori_id` (`kategori_id`);
 
 --
--- Indeks untuk tabel `pembayaran`
+-- Indexes for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`pembayaran_id`),
   ADD KEY `booking_kode` (`booking_kode`);
 
 --
--- Indeks untuk tabel `promo`
+-- Indexes for table `promo`
 --
 ALTER TABLE `promo`
   ADD PRIMARY KEY (`promo_id`),
   ADD KEY `tipe_kode` (`tipe_kode`);
 
 --
--- Indeks untuk tabel `slide`
+-- Indexes for table `slide`
 --
 ALTER TABLE `slide`
   ADD PRIMARY KEY (`slide_id`);
 
 --
--- Indeks untuk tabel `tipe`
+-- Indexes for table `tipe`
 --
 ALTER TABLE `tipe`
   ADD PRIMARY KEY (`tipe_kode`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_nik`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `bukti_transfer`
+-- AUTO_INCREMENT for table `bukti_transfer`
 --
 ALTER TABLE `bukti_transfer`
   MODIFY `bt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `customer`
+-- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `fasilitas`
+-- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
   MODIFY `fasilitas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `gambar`
+-- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
   MODIFY `gambar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `kategori_layanan`
+-- AUTO_INCREMENT for table `kategori_layanan`
 --
 ALTER TABLE `kategori_layanan`
   MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `kuisioner`
+-- AUTO_INCREMENT for table `kuisioner`
 --
 ALTER TABLE `kuisioner`
   MODIFY `kuisioner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `layanan`
+-- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
   MODIFY `layanan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `pembayaran`
+-- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   MODIFY `pembayaran_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `promo`
+-- AUTO_INCREMENT for table `promo`
 --
 ALTER TABLE `promo`
   MODIFY `promo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `slide`
+-- AUTO_INCREMENT for table `slide`
 --
 ALTER TABLE `slide`
   MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_nik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1234;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `booking`
+-- Constraints for table `booking`
 --
 ALTER TABLE `booking`
   ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`kamar_id`) REFERENCES `kamar` (`kamar_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `customer`
+-- Constraints for table `customer`
 --
 ALTER TABLE `customer`
   ADD CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`booking_kode`) REFERENCES `booking` (`booking_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `feedback`
+-- Constraints for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`kuisioner_id`) REFERENCES `kuisioner` (`kuisioner_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `gambar`
+-- Constraints for table `gambar`
 --
 ALTER TABLE `gambar`
   ADD CONSTRAINT `gambar_ibfk_1` FOREIGN KEY (`tipe_kode`) REFERENCES `tipe` (`tipe_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `kamar`
+-- Constraints for table `kamar`
 --
 ALTER TABLE `kamar`
   ADD CONSTRAINT `kamar_ibfk_1` FOREIGN KEY (`tipe_kode`) REFERENCES `tipe` (`tipe_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `layanan`
+-- Constraints for table `layanan`
 --
 ALTER TABLE `layanan`
   ADD CONSTRAINT `layanan_ibfk_1` FOREIGN KEY (`kategori_id`) REFERENCES `kategori_layanan` (`kategori_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `pembayaran`
+-- Constraints for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD CONSTRAINT `pembayaran_ibfk_1` FOREIGN KEY (`booking_kode`) REFERENCES `booking` (`booking_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `promo`
+-- Constraints for table `promo`
 --
 ALTER TABLE `promo`
   ADD CONSTRAINT `promo_ibfk_1` FOREIGN KEY (`tipe_kode`) REFERENCES `tipe` (`tipe_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
